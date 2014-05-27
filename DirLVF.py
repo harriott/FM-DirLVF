@@ -48,15 +48,21 @@ def rec_ind_dirlist(dirTolist):
     dirList = scriptdirpath+' - scanned '+startd
     for root, folders, files in os.walk(dirTolist):
         if root == '.':
-            dirList += '\n.\n'
+            dirList += '\n.'
         else:
-#           dirList += '\n'+root
-            dirList += '\n'+re.sub(r'.*?\\', r'.\\', root)+'\n'
+            dirList += '\n'+re.sub(r'.*?\\', r'.\\', root)
+        fL = '\n'
+        fLc = 1
         for file in files:
             # Report a progress count:
             dlc += 1
             print('\r', dlc, end=' ')
-            dirList += ' ¦ '+file
+            if len(fL)+len(file) < fLc*2801:
+                fL += ' · '+file
+            else:
+                fLc += 1
+                fL += '\n · '+file
+        dirList += fL
     return dirList
 
 # Create a file object for output:
