@@ -12,7 +12,10 @@ requirements
 To get the full benefit - folded and syntax highlighted in gVim -
 you will need in your installation of gVim:
 
-- ftplugin/dirlist.vim
-- syntax/dirlist.vim
+- [ftplugin/dirlist.vim](https://github.com/harriott/vimfiles/blob/master/ftplugin/dirlist.vim)
+- [syntax/dirlist.vim](https://github.com/harriott/vimfiles/blob/master/syntax/dirlist.vim)
 
-You can get them out of https://github.com/harriott/vimfiles 
+related
+=======
+The unix command `ls -R1` also produces a nicely formatted listing, but it would need post-processing to compact it down, and is less convenient, of course, to access in Windows 7.
+
