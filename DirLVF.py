@@ -26,14 +26,14 @@ import sys
 startd = datetime.datetime.now().isoformat(' ')
 
 # Get this script's directory path
-scriptdirpath = os.path.dirname(os.path.abspath(__file__))
-# and this script's directory name
+scriptdirpath = os.getcwd()
+# and, from that, this script's directory name
 scriptdir = os.path.split(scriptdirpath)[1].replace(" ", "_")
 # and this script's filename without extension
 scriptfilename = (os.path.basename(os.path.splitext(sys.argv[0])[0]))
 # and prepare the output file from them:
 outfile = scriptdir + '_' + scriptfilename + '.txt'
-print('When this is done, you should open', outfile, '\n')
+print('When this is done, you should open :\n', outfile)
 
 
 def rec_ind_dirlist(dirTolist):
@@ -70,3 +70,4 @@ fo = open(outfile, 'w', encoding='utf-8')
 # Write vim modeline and the list to the file object (and close it):
 fo.write('vim: set ft=dirlist:\n\n'+rec_ind_dirlist('.'))
 fo.close()
+print()
