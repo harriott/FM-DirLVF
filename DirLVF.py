@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# vim: set tw=79:
+# vim: set cc=80 tw=79:
 
 """
 Print to file an indented directory structure listing, ready for vim folding.
@@ -16,6 +16,9 @@ Requires these accompanying vimfiles:
 Reason for this:
     Handily folded, compact, easily searchable in vim,
     archive list of a directory.
+
+In openSUSE, from the root of what you want to list, do something like this:
+    python3 ~/Files/IT_stack/DirLVF/DirLVF.py
 """
 import datetime
 import os
