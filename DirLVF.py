@@ -76,4 +76,4 @@ fo = open(outfile, 'w', encoding='utf-8')
 # Write vim modeline and the list to the file object (and close it):
 fo.write('vim: set ft=dirlist:\n\n'+rec_ind_dirlist('.'))
 fo.close()
-???
+print()
