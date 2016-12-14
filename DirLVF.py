@@ -19,6 +19,9 @@ Reason for this:
 
 In openSUSE, from the root of what you want to list, do something like this:
     python3 ~/Files/IT_stack/DirLVF/DirLVF.py
+In Arch:
+    python3 /mnt/WD2000JD/Files/IT_stack/DirLVF/DirLVF.py
+    python3 /mnt/WD30EZRZ/More/IT_stack/DirLVF/DirLVF.py
 """
 import datetime
 import os
@@ -73,4 +76,4 @@ fo = open(outfile, 'w', encoding='utf-8')
 # Write vim modeline and the list to the file object (and close it):
 fo.write('vim: set ft=dirlist:\n\n'+rec_ind_dirlist('.'))
 fo.close()
-print()
+???
