@@ -22,6 +22,8 @@ In openSUSE, from the root of what you want to list, do something like this:
 In Arch:
     python3 /mnt/WD2000JD/Files/IT_stack/DirLVF/DirLVF.py
     python3 /mnt/WD30EZRZ/More/IT_stack/DirLVF/DirLVF.py
+In Windows 10:
+    python E:\More\IT_stack\DirLVF\DirLVF.py
 """
 import datetime
 import os
