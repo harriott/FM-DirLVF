@@ -34,13 +34,13 @@ import sys
 startd = datetime.datetime.now().isoformat(' ')
 
 # Get the current working directory path
-scriptdirpath = os.getcwd()
-# and, from that, this script's directory name
-scriptdir = os.path.split(scriptdirpath)[1].replace(" ", "_")
-# and this script's filename without extension
+cwdp = os.getcwd()
+# and, from that, the current working directory name
+cwdn = os.path.split(cwdp)[1].replace(" ", "_")
+# get this script's filename without extension
 scriptfilename = (os.path.basename(os.path.splitext(sys.argv[0])[0]))
 # and prepare the output file from them:
-outfile = scriptdir + '_' + scriptfilename + '.txt'
+outfile = cwdn + '_' + scriptfilename + '.txt'
 print('When this is done, you should open :\n', outfile)
 
 
@@ -50,10 +50,10 @@ def rec_ind_dirlist(dirTolist):
     and no paths repeated
     (ie each directory name appears just once, like a header).
     Show a progress count while working."""
-    print('Looking at contents of', scriptdirpath, ':')
+    print('Looking at contents of', cwdp, ':')
     dlc = 0
     # Initialise the list just with the base folder path, and date:
-    dirList = scriptdirpath+' - scanned '+startd
+    dirList = cwdp+' - scanned '+startd
     for root, folders, files in os.walk(dirTolist):
         if root == '.':
             dirList += '\n.'
