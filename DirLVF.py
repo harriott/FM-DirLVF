@@ -33,7 +33,7 @@ import sys
 # Get the datetime:
 startd = datetime.datetime.now().isoformat(' ')
 
-# Get this script's directory path
+# Get the current working directory path
 scriptdirpath = os.getcwd()
 # and, from that, this script's directory name
 scriptdir = os.path.split(scriptdirpath)[1].replace(" ", "_")
