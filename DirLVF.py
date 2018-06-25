@@ -23,7 +23,7 @@ In Arch:
     python3 /mnt/WD2000JD/Files/IT_stack/DirLVF/DirLVF.py
     python3 /mnt/WD30EZRZ/More/IT_stack/DirLVF/DirLVF.py
 In Windows 10:
-    python E:\More\IT_stack\DirLVF\DirLVF.py
+    py D:\Dropbox\JH\IT_stack\onGitHub\DirLVF\DirLVF.py
 """
 import datetime
 import os
