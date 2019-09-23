@@ -20,8 +20,7 @@ Reason for this:
 In openSUSE, from the root of what you want to list, do something like this:
     python3 ~/Files/IT_stack/DirLVF/DirLVF.py
 In Arch:
-    python3 /mnt/WD2000JD/Files/IT_stack/DirLVF/DirLVF.py
-    python3 /mnt/WD30EZRZ/More/IT_stack/DirLVF/DirLVF.py
+    python3 /mnt/SDSSDA240G/Dropbox/JH/IT_stack/onGitHub/DirLVF/DirLVF.py
 In Windows 10:
     py D:\Dropbox\JH\IT_stack\onGitHub\DirLVF\DirLVF.py
 """
