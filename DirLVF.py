@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#! /usr/bin/python3
 # vim: set cc=80 tw=79:
 
 """
@@ -17,11 +17,10 @@ Reason for this:
     Handily folded, compact, easily searchable in vim,
     archive list of a directory.
 
-In openSUSE, from the root of what you want to list, do something like this:
-    python3 ~/Files/IT_stack/DirLVF/DirLVF.py
-In Arch:
-    python3 /mnt/SDSSDA240G/Dropbox/JH/IT_stack/onGitHub/DirLVF/DirLVF.py
-In Windows 10:
+From the root of what you want to list, do something like this:
+  In Arch:
+    python3 $onGH/DirLVF/DirLVF.py
+  In Windows 10:
     py D:\Dropbox\JH\IT_stack\onGitHub\DirLVF\DirLVF.py
 """
 import datetime
@@ -71,6 +70,7 @@ def rec_ind_dirlist(dirTolist):
                 fL += '\n · '+file
         dirList += fL
     return dirList
+
 
 # Create a file object for output:
 fo = open(outfile, 'w', encoding='utf-8')
