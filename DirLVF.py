@@ -52,7 +52,8 @@ def rec_ind_dirlist(dirTolist):
     dlc = 0
     # Initialise the list just with the base folder path, and date:
     dirList = cwdp+' - scanned '+startd
-    for root, folders, files in os.walk(dirTolist):
+    for root, folders, files in os.walk(dirTolist, topdown=True):
+        folders[:] = [fo for fo in folders if fo not in 'rsnapshot']
         if root == '.':
             dirList += '\n.'
         else:
