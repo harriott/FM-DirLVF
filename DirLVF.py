@@ -18,10 +18,8 @@ Reason for this:
     archive list of a directory.
 
 From the root of what you want to list, do something like this:
-  In Arch:
-    python3 $onGH/DirLVF/DirLVF.py
-  In Windows 10:
-    py D:\Dropbox\JH\IT_stack\onGitHub\DirLVF\DirLVF.py
+  In Arch:  python3 $onGH/DirLVF/DirLVF.py
+  In Windows 10:  py $onGH\DirLVF\DirLVF.py
 """
 import datetime
 import os
