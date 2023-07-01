@@ -9,8 +9,8 @@ print to file a vim modeline, and then entire directory contents,
 with filepaths visually compacted, and files listed all in one sentence.
 
 Requires these accompanying vimfiles:
-    ftplugin/dirlist.vim - for the vim folding
-    syntax/dirlist.vim
+    ftplugin/dirl.vim - for the vim folding
+    $vimfiles/syntax/dirl.vim
         - for helpful syntax highlighting of the directory names
 
 Reason for this:
@@ -18,8 +18,8 @@ Reason for this:
     archive list of a directory.
 
 From the root of what you want to list, do something like this:
-  In Arch:  python3 $onGH/DirLVF/DirLVF.py
-  In Windows 10:  py $onGH\DirLVF\DirLVF.py
+  In Arch:  [sudo] python3 $onGH/FM-DirLVF/DirLVF.py
+  In Windows 10:  py $onGH\FM-DirLVF\DirLVF.py
 """
 import datetime
 import os
@@ -36,7 +36,7 @@ cwdn = os.path.split(cwdp)[1].replace(" ", "_")
 # get this script's filename without extension
 scriptfilename = (os.path.basename(os.path.splitext(sys.argv[0])[0]))
 # and prepare the output file from them:
-outfile = cwdn + '_' + scriptfilename + '.txt'
+outfile = cwdn + '_' + scriptfilename + '.dirl'
 print('When this is done, you should open :\n', outfile)
 
 
@@ -71,9 +71,8 @@ def rec_ind_dirlist(dirTolist):
     return dirList
 
 
-# Create a file object for output:
+# file object
 fo = open(outfile, 'w', encoding='utf-8')
-# Write vim modeline and the list to the file object (and close it):
-fo.write('vim: set ft=dirlist:\n\n'+rec_ind_dirlist('.'))
+fo.write(rec_ind_dirlist('.'))
 fo.close()
 print()
